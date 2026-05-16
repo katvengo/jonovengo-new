@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jonovengo-new</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Navigation bar ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="#" class="navbar__brand">jonovengo</a>
+
+      <!-- Hamburger toggle (visible on mobile) -->
+      <button
+        class="navbar__toggle"
+        aria-controls="navbar-links"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav links -->
+      <ul class="navbar__links" id="navbar-links" role="list">
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ── Demo page content ── -->
+  <main>
+    <section class="hero">
+      <h1>Welcome to jonovengo</h1>
+      <p>Resize the window or open on a mobile device to see the responsive hamburger menu in action.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
