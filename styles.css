@@ -1,0 +1,253 @@
+:root {
+  color-scheme: light;
+  --background: #f7f2eb;
+  --surface: rgba(255, 255, 255, 0.72);
+  --text: #31261f;
+  --muted: #6a5950;
+  --accent: #9f5f47;
+  --accent-soft: #e8c6b7;
+  --border: rgba(49, 38, 31, 0.1);
+  --shadow: 0 20px 40px rgba(49, 38, 31, 0.08);
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fbf7f3 0%, var(--background) 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+main {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.brand h1,
+.section-heading h2,
+.hero h2,
+.prose h2,
+.contact-layout h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.button:hover {
+  color: var(--accent);
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero p {
+  max-width: 38rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 999px;
+  background: var(--text);
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.hero-art {
+  position: relative;
+  min-height: 280px;
+}
+
+.art-swatch {
+  position: absolute;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.swatch-large {
+  inset: 0 2rem 1rem 0;
+  background: linear-gradient(135deg, #c76546, #edc37d 55%, #7398b7);
+}
+
+.swatch-small {
+  right: 0;
+  bottom: 0;
+  width: 38%;
+  height: 42%;
+  background: linear-gradient(135deg, #f8ede2, #b37d6f);
+  border: 10px solid rgba(255, 255, 255, 0.85);
+}
+
+.card-grid,
+.gallery-grid,
+.contact-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card,
+.gallery-card,
+.contact-list div {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border);
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-image {
+  height: 220px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.image-one {
+  background: linear-gradient(180deg, #8aa0bc, #e6c0a8);
+}
+
+.image-two {
+  background: linear-gradient(160deg, #ad6c4c, #f0d2a8);
+}
+
+.image-three {
+  background: linear-gradient(160deg, #51647b, #cfd7d7);
+}
+
+.image-four {
+  background: linear-gradient(160deg, #9d8f73, #ece5d8);
+}
+
+.image-five {
+  background: linear-gradient(160deg, #5e5a77, #e1b89e);
+}
+
+.image-six {
+  background: linear-gradient(160deg, #7f9d6f, #f2d0ca);
+}
+
+.prose {
+  max-width: 760px;
+}
+
+.prose p,
+.contact-layout p,
+.card p,
+.gallery-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.contact-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.contact-list dt {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.contact-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .hero,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    display: grid;
+    padding-top: 1.5rem;
+  }
+
+  .panel {
+    padding: 1.5rem;
+  }
+}
